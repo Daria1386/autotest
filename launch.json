@@ -1,0 +1,17 @@
+
+{
+    "version": "0.2.0",
+    "configurations": [
+      {
+        "name": "Mocha",
+        "type": "node",
+        "request": "launch",
+        "program": "${workspaceFolder}/node_modules/mocha/bin/_mocha",
+        "args": ["${workspaceFolder}/q3/*.spec.js"],
+        "console": "integratedTerminal",
+        "internalConsoleOptions": "neverOpen",
+        "skipFiles": ["<node_internals>/**"]
+      }
+    ]
+  }
+  
