@@ -24,8 +24,9 @@ import { strict as assert } from 'assert';
             this.elementLogin.sendKeys(this.user.login+'b');
             this.elementPwd.sendKeys(this.user.password);
             const button = await this.driver.findElement(By.xpath("//button[@id='launchbtn']")).click();
+            await Utils.sleep(1000);
             let errorAll = await this.error.getText();
-            await Utils.sleep(2000);
+            await Utils.sleep(1000);
             assert.equal("Пользователь не найден", errorAll);
         }
 
@@ -35,8 +36,9 @@ import { strict as assert } from 'assert';
             this.elementLogin.sendKeys(this.user.login);
             this.elementPwd.sendKeys(this.user.password.slice(-3));
             const button = await this.driver.findElement(By.xpath("//button[@id='launchbtn']")).click();
+            await Utils.sleep(1000);
             let errorPassword = await this.error.getText();
-            await Utils.sleep(2000);
+            await Utils.sleep(1000);
             assert.equal("Пароль не верен", errorPassword);
         }
 
